@@ -114,7 +114,7 @@ SLIDER SECTION
     left: 40px;
     cursor: pointer;
     font-size: 35px;
-    color: #fff;
+    color: #222;
     /* box-shadow: var(--box_shadow); */
 }
 .fa-chevron-right{
@@ -123,7 +123,7 @@ SLIDER SECTION
     right: 40px;
     cursor: pointer;
     font-size: 35px;
-    color: #fff;
+    color: #222;
 }
 .sliderImage img{
     width: 100%;
@@ -634,7 +634,7 @@ BACK TO TOP
         left: 10px;
         cursor: pointer;
         font-size: 25px;
-        color: #fff;
+        color: #222;
         /* box-shadow: var(--box_shadow); */
     }
     .fa-chevron-right{
@@ -643,7 +643,7 @@ BACK TO TOP
         right: 10px;
         cursor: pointer;
         font-size: 25px;
-        color: #fff;
+        color: #222;
         /* box-shadow: var(--box_shadow); */
     }
     .sliderImage img{

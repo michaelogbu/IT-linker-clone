@@ -32,38 +32,39 @@ window.addEventListener("scroll", () => {
 
 // SLIDER
 
-const sliderImage = ["img/slider1.jpg", "img/slider2.jpg", "img/slider3.jpg", "img/slider4.jpg"];
+const slider = ["img/slider1.jpg", "img/slider2.jpg", "img/slider3.jpg", "img/slider4.jpg"];
 
 const left = document.querySelector("#left")
 const right = document.querySelector("#right")
-const slider = document.querySelector("#slider-img")
+const slide = document.querySelector(".sliderImage img")
 
 let counter = 0
-const len = sliderImage.length
+const len = slider.length
 
-// console.log(lenght);
+// console.log(len);
 
 window.addEventListener("DOMContentLoaded", () => {
     const items = len[counter];
     slider.src = items
-    console.log(items);
+    // console.log(items);
 })
 
 const newslide = (count) => {
-    const items = sliderImage[count]
+    const items = slider[count]
     slider.src = items
     // console.log(items);
 }
 
 
-// left.addEventListener("click", function(){
-//     // console.log(1234);
-//     counter --
-//     if(counter < 0){
-//         counter = len - 1
-//     }
-//     newslide()
-// })
+left.addEventListener("click", () => {
+    // console.log(1234);
+    counter --;
+    if(counter < 0){
+        counter = len - 1;
+    }
+    console.log(counter);
+    newslide(counter);
+})
 
 
 
