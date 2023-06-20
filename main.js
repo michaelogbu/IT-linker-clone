@@ -32,42 +32,43 @@ window.addEventListener("scroll", () => {
 
 // SLIDER
 
-const slider = ["img/slider1.jpg", "img/slider2.jpg", "img/slider3.jpg", "img/slider4.jpg"];
+const slide = ["img/slider1.jpg", "img/slider2.jpg", "img/slider3.jpg", "img/slider4.jpg"];
 
 const left = document.querySelector("#left")
 const right = document.querySelector("#right")
-const slide = document.querySelector(".sliderImage img")
+const sliderImg = document.querySelector("#imgSlider")
 
 let counter = 0
-const len = slider.length
+const len = slide.length
 
-// console.log(len);
+// console.log(slide);
 
-window.addEventListener("DOMContentLoaded", () => {
-    const items = len[counter];
-    slider.src = items
+window.addEventListener('DOMContentLoaded', () => {
+    const items = slide[counter];
+    sliderImg.src = items;
     // console.log(items);
 })
 
-const newslide = (count) => {
-    const items = slider[count]
-    slider.src = items
-    // console.log(items);
+const newSlide = (count) => {
+    const items = slide[count];
+    sliderImg.src = items;
 }
 
-
-left.addEventListener("click", () => {
-    // console.log(1234);
-    counter --;
+left.addEventListener('click', () => {
+    // console.log(123);
+    counter --
     if(counter < 0){
-        counter = len - 1;
+        counter = len -1
     }
-    console.log(counter);
-    newslide(counter);
+    newSlide(counter)
 })
-
-
-
+right.addEventListener('click', () => {
+    counter ++
+    if(counter > len -1){
+        counter = 0;
+    }
+    newSlide(counter)
+})
 
 
 

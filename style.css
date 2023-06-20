@@ -36,6 +36,7 @@ NAVIGATION SECTION
     padding: 10px 0;
     width: 100%;
     margin-top: -20px;
+    height: 70px;
 }
 .stkcontent{
     padding: 16px;
@@ -114,7 +115,7 @@ SLIDER SECTION
     left: 40px;
     cursor: pointer;
     font-size: 35px;
-    color: #222;
+    color: #fff;
     /* box-shadow: var(--box_shadow); */
 }
 .fa-chevron-right{
@@ -123,7 +124,7 @@ SLIDER SECTION
     right: 40px;
     cursor: pointer;
     font-size: 35px;
-    color: #222;
+    color: #fff;
 }
 .sliderImage img{
     width: 100%;
@@ -634,7 +635,7 @@ BACK TO TOP
         left: 10px;
         cursor: pointer;
         font-size: 25px;
-        color: #222;
+        color: #fff;
         /* box-shadow: var(--box_shadow); */
     }
     .fa-chevron-right{
@@ -643,7 +644,7 @@ BACK TO TOP
         right: 10px;
         cursor: pointer;
         font-size: 25px;
-        color: #222;
+        color: #fff;
         /* box-shadow: var(--box_shadow); */
     }
     .sliderImage img{
