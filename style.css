@@ -269,9 +269,9 @@ PROFITS
     margin-right: 15px;
 }
 #profiticon{
-    font-size: 50px;
+    font-size: 70px;
     color: var(--mainColor);
-    margin-right: 22px;
+    margin-right: 40px;
 }
 .mainContentHead{
     color: #fff;
@@ -388,7 +388,7 @@ REVIEW SECTION
     display: grid;
     padding: 10px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 10px;
     align-items: center;
     place-content: center;
 }
@@ -398,7 +398,7 @@ REVIEW SECTION
     justify-content: center;
     flex-direction: column;
     padding: 15px;
-    width: 335px;
+    width: 330px;
     height: 290px;
     position: relative;
     background-image: linear-gradient(rgba(50, 45, 45, 0.59),rgba(50, 45, 45, 0.59));
@@ -420,7 +420,7 @@ REVIEW SECTION
     margin-top: 50px;
 }
 .reviewJob{
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
     color: #fff;
     margin-top: 5px; 
@@ -430,7 +430,7 @@ q{
     font-size: 39px;
 }
 .reviewPara{
-    font-size: 15px;
+    font-size: 14px;
     color: #fff;
     line-height: 20px;
     font-style: italic;
@@ -460,8 +460,8 @@ FOOTER SECTION
     margin-bottom: 15px;
 }
 .footerLogo img{
-    width: 150px;
-    height: 70px;
+    width: 120px;
+    height: 60px;
 }
 .footerContent{
     text-align: center;
@@ -620,7 +620,7 @@ BACK TO TOP
         transform: translateX(-120%);
     }
     .navLinks{
-        width: 90vw;
+        width: 100vw;
         margin: 5px;
     }
 
@@ -689,7 +689,8 @@ BACK TO TOP
     ========
     */
     .AboutUs_container{
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 25px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
@@ -699,11 +700,12 @@ BACK TO TOP
         margin-left: -45px;
         margin-top: -155px;
         height: 350px;
-
     }
     .aboutUsHead{
         font-size: 20px;
         margin-bottom: 9px;
+        text-align: center;
+        margin-top: -10px;
     }
     .aboutUsPara{
         line-height: 19px;
@@ -731,18 +733,22 @@ BACK TO TOP
     .profitContentContainer{
         display: flex;
         align-items: center;
-        /* justify-content: center; */
+        justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 12px;
         background: var(--backgroundColor);
         width: 100%;
-        height: 400px;
+        height: 350px;
     }
     .profitHead{
         font-size: 20px;
         color: var(--mainColor);
         margin-bottom: 15px;
+    }
+    #profiticon{
+        font-size: 50px;
+        margin-right: 22px;
     }
     .profitHead span{
         color: #fff;
@@ -752,12 +758,12 @@ BACK TO TOP
     .mainContentHead{
         color: #fff;
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .mainContentPara{
         color: #fff;
         font-size: 12px;
-        line-height: 22px;
+        line-height: 18px;
     }
     .profitImg img{
         width: 490px;
@@ -878,8 +884,8 @@ BACK TO TOP
     ==============
     */
     .footerLogo img{
-        width: 100px;
-        height: 60px;
+        width: 80px;
+        height: 45px;
         margin-left: -60px;
     }
     .footerContent{

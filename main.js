@@ -31,7 +31,6 @@ window.addEventListener("scroll", () => {
 
 
 // SLIDER
-
 const slide = ["img/slider1.jpg", "img/slider2.jpg", "img/slider3.jpg", "img/slider4.jpg"];
 
 const left = document.querySelector("#left")
