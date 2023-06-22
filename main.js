@@ -69,7 +69,7 @@ right.addEventListener('click', () => {
     newSlide(counter)
 })
 
-
+//SMOOHT SCROLL
 
 
 
