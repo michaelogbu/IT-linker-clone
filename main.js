@@ -1,7 +1,7 @@
 
 // NAVIGATION
-const bars = document.querySelector("#bars");
-const times = document.querySelector("#times");
+const bars = document.querySelector("#bars")
+const times = document.querySelector("#times")
 const nav = document.querySelector(".navLinkContainer")
 
 
@@ -9,8 +9,8 @@ bars.addEventListener("click", () => {
     // console.log(bars);
     if (!nav.classList.contains("navShow")) {
        nav.classList.add("navShow"); 
-    }else{
-       nav.classList.remove("navShow"); 
+    } else {
+       nav.classList.toggle("navShow"); 
     }
 })
 
@@ -20,7 +20,7 @@ const totop = document.querySelector(".toTopContainer");
 const mainnav = document.querySelector(".nav");
 
 window.addEventListener("scroll", () => {
-    const scrollHeight = window.pageYOffset;
+    const scrollHeight = window.scrollY;
     // console.log(totop);
     if(scrollHeight > 500){
         totop.classList.add("active");
@@ -31,43 +31,51 @@ window.addEventListener("scroll", () => {
 
 
 // SLIDER
-const slide = ["img/slider1.jpg", "img/slider2.jpg", "img/slider3.jpg", "img/slider4.jpg"];
+const sliderImage = document.querySelectorAll('.sliderImage img')
+const leftBtn = document.querySelector('#left')
+const rightBtn = document.querySelector('#right')
 
-const left = document.querySelector("#left")
-const right = document.querySelector("#right")
-const sliderImg = document.querySelector("#imgSlider")
 
-let counter = 0
-const len = slide.length
-
-// console.log(slide);
-
-window.addEventListener('DOMContentLoaded', () => {
-    const items = slide[counter];
-    sliderImg.src = items;
-    // console.log(items);
-})
-
-const newSlide = (count) => {
-    const items = slide[count];
-    sliderImg.src = items;
+const next_slide = () => {
+    const siderActive = document.querySelector(".siderActive");
+    
+    const activeDiv = siderActive.classList;
+    
+    const nextslider = siderActive.nextElementSibling;
+    
+    siderActive.classList.remove("siderActive");
+    if (nextslider) {
+        nextslider.classList.add("siderActive")
+    } else {
+        sliderImage[0].classList.add("siderActive")
+    }
 }
 
-left.addEventListener('click', () => {
+const prev_slide = () => {
+    const siderActive = document.querySelector(".siderActive");
     // console.log(123);
-    counter --
-    if(counter < 0){
-        counter = len -1
+    const activeDiv = siderActive.classList;
+    // console.log(activeDiv);
+    const prevslider = siderActive.previousElementSibling;
+    // console.log(prevslider);
+    siderActive.classList.remove("siderActive");
+    if (prevslider) {
+        prevslider.classList.add("siderActive");
+    } else {
+        sliderImage[sliderImage.length - 1].classList.add("siderActive")
     }
-    newSlide(counter)
+}
+
+rightBtn.addEventListener("click", () => {
+    next_slide()
 })
-right.addEventListener('click', () => {
-    counter ++
-    if(counter > len -1){
-        counter = 0;
-    }
-    newSlide(counter)
+
+leftBtn.addEventListener("click", () => {
+    prev_slide()
 })
+
+setInterval(() => next_slide(), 3000)
+
 
 //SMOOHT SCROLL
 
