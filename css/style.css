@@ -732,7 +732,7 @@ SIGN UP PAGE
     }
     .navLogo img{
         position: absolute;
-        left: -15px;
+        left: -5px;
         top: -25px;
     }
     .navContainer{
@@ -751,7 +751,7 @@ SIGN UP PAGE
         top: 35px;
         width: 70vw;
         place-items: start;
-        transform: translateX(-120%);
+        transform: translateX(-130%);
         /* z-index: 150; */
         background: #fff;
     }
