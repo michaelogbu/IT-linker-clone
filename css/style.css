@@ -8,7 +8,6 @@
     --box_shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +15,10 @@
     list-style: none;
     text-decoration: none;
     font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 .contain{
     width: 75%;
@@ -717,18 +720,16 @@ SIGN UP PAGE
         position: relative;
     }
     .fa-bars{
-        display: block;
+        display: none;
         top: 23px;
     }
     .fa-times{
         display: none;
         top: 25px;
     }
-    .removeIcon{
-        display: none;
-    }
     .showIcon{
         display: block;
+        transition: all 0.6s linear;
     }
     .navLogo img{
         position: absolute;
@@ -749,22 +750,20 @@ SIGN UP PAGE
         grid-template-columns: repeat(1, 1fr);
         box-shadow: var(--box_shadow);
         top: 35px;
-        width: 70vw;
+        width: 100vw;
         place-items: start;
-        transform: translateX(-130%);
+        transform: translateX(-1000px);
         /* z-index: 150; */
         background: #fff;
     }
-    .navLinkContainer.navShow{
+
+    .MenuShow{
+        transform: translateX(0);
         transition: all 0.6s ease-in-out;
-        transform: translateX(-20%);
-    }
-    .nonavShow{
-        transition: all 0.6s ease-in-out;
-        transform: translateX(-120%);
     }
     .navLinks{
-        width: 70vw;
+        text-align: center;
+        width: 100vw;
         margin: 5px;
     }
 

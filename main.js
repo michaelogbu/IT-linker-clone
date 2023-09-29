@@ -5,13 +5,57 @@ const times = document.querySelector("#times")
 const nav = document.querySelector(".navLinkContainer")
 
 
-bars.addEventListener("click", () => {
-    // console.log(bars);
-    if (!nav.classList.contains("navShow")) {
-       nav.classList.add("navShow"); 
-    } else {
-       nav.classList.toggle("navShow"); 
+const showIcon = () => {
+    const showIcon = document.querySelector(".showIcon")
+
+    const activeIcon = showIcon.classList
+
+    const newShowIcon = showIcon.nextElementSibling
+
+    showIcon.classList.remove("showIcon")
+    if(newShowIcon){
+        newShowIcon.classList.add("showIcon")
+    }else{
+        newShowIcon.classList.remove("showIcon")
     }
+}
+const showMenu = () => {
+    const menu = document.querySelector(".MenuShow")
+    
+    if(!nav.classList.contains("MenuShow")){
+        nav.classList.add("MenuShow")
+    }
+}
+
+const hideIcon = () => {
+    const showIcon = document.querySelector(".showIcon")
+
+    const activeIcon = showIcon.classList
+
+    const newShowIcon = showIcon.previousElementSibling
+
+    showIcon.classList.remove("showIcon")
+    if(newShowIcon){
+        newShowIcon.classList.add("showIcon")
+    }else{
+        newShowIcon.classList.remove("showIcon")
+    }
+}
+const hideMenu = () => {
+    const menu = document.querySelector(".MenuShow")
+    
+    if(nav.classList.contains("MenuShow")){
+        nav.classList.remove("MenuShow")
+    }
+}
+
+bars.addEventListener("click", () => {
+    showIcon()
+    showMenu()
+})
+times.addEventListener("click", () => {
+    hideIcon()
+    hideMenu()
 })
 
 
